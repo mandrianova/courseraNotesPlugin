@@ -29,3 +29,9 @@ OPENAI_PROJECT_ID=proj-...
 - need to run `npm run dev` in the uiApp directory to start the frontend server.
 - need to run `npm run build` in the uiApp directory to build the plugin script.
 - index.html: the basic example of the video page with the plugin script.
+
+## Chrome settings
+
+- Go to `chrome://extensions/` and enable the developer mode.
+- Click the `Load unpacked` button and select the plugin directory.
+- Go to the coursera video page and click the plugin icon to open the plugin.
