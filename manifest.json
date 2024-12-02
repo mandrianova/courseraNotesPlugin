@@ -1,0 +1,20 @@
+{
+  "name": "aiLector",
+  "description": "ChatGPT parsing of subtitles",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "./plugin/index.html",
+    "default_icon": "./plugin/assets/icon.png"
+  },
+    "content_scripts": [
+    {
+      "js": ["uiApp/dist/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*",
+        "https://www.coursera.org/learn/*"
+      ]
+    }
+  ]
+}
