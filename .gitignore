@@ -5,3 +5,5 @@ serverApp/output/*
 serverApp/.env
 db.sqlite*
 .venv
+
+__pycache__
