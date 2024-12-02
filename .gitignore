@@ -1,0 +1,7 @@
+.idea
+uiApp/node_modules
+uiApp/dist
+serverApp/output/*
+serverApp/.env
+db.sqlite*
+.venv
