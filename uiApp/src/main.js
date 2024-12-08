@@ -9,12 +9,6 @@ const agent = new Agent();
 panel.content.appendChild(agent.render())
 
 function run() {
-  if (window.location.hostname === "localhost") {
-
-  } else if (!window.location.href.includes("/lecture/")) {
-    panel.hide();
-    return;
-  }
   if (CURRENT_LOCATION_PATH === window.location.pathname) {
     return;
   }

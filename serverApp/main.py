@@ -15,7 +15,7 @@ client = OpenAI()
 model = "gpt-4o"
 
 cur_dir = Path(__file__).parent
-sys_prompt_path = cur_dir / "system_prompt.txt"
+sys_prompt_path = cur_dir / "system_prompt.md"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
