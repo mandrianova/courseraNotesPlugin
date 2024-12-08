@@ -1,5 +1,6 @@
 
 import logging
+import os
 from pathlib import Path
 from typing import Union
 
@@ -33,6 +34,13 @@ system_message = {
     "content": system_prompt
 }
 
+OUTPUT_DIR = os.getenv("OUTPUT_DIR")
+if not OUTPUT_DIR:
+    OUTPUT_DIR = cur_dir / "output"
+else:
+    OUTPUT_DIR = Path(OUTPUT_DIR)
+logger.info(f"Output directory: {OUTPUT_DIR}")
+
 class NotesFile(BaseModel):
     filepath: str
     notes: str
@@ -55,7 +63,7 @@ app.add_middleware(
 def save_file(filepath: str, notes: str) -> None:
     if filepath.startswith("./"):
         filepath = filepath[2:]
-    new_filepath = cur_dir / "output" / filepath
+    new_filepath = OUTPUT_DIR / filepath
     if not new_filepath.parent.exists():
         new_filepath.parent.mkdir(parents=True)
     i = 1
